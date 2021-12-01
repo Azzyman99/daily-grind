@@ -85,19 +85,65 @@
       </small>
     </footer>
     <!-- END Footer -->
-	/*
-	Use HTML/CSS & JavaScript to create a single page that rotates unique colors and content for each weekday (Sunday to Saturday) into the page.  
 	
-	The content must include:
+	/*	Use HTML/CSS & JavaScript to create a single page that rotates unique colors and content for each weekday (Sunday to Saturday) into the page.  
+		
+		The content must include:
 
-	One unique image, with appropriate and matching content in the alt tag.  
-	
-	A paragraph or two of content that describes the daily item (paragraph must include the name of the highlighted weekday)
-	
-	A unique color that supports the image and paragraph of content
+		One unique image, with appropriate and matching content in the alt tag.  
+		
+		A paragraph or two of content that describes the daily item (paragraph must include the name of the highlighted weekday)
+		
+		A unique color that supports the image and paragraph of /*
 
-	*/
-	//alert("hello");
+	let myDate = new Date(),
+
+	let today = myDate.getDay();
+	let coffee = "";
+	
+
+	switch(today){
+		case 0:
+			today = "Sunday";
+		break;
+
+		case 1:
+			today = "Monday";
+		break;
+
+		case 2:
+			today = "Tuesday";
+		break;
+
+		case 4:
+			today = "Thursday";
+		break;
+
+		case 5:
+			today = "Firday";
+		break;
+
+		case 6:
+			today = "Saturday";
+		break;
+
+		default:
+			today = "Wrong Day";
+	}
+
+		coffee = {
+		pic:"pumpkin-spice-latte.jpg",
+		alt: "Pumpkin Spice Coffee Latte",
+		color: "orange",
+		description:`Pumpkin spice lattes are awsome`,
+		coffee: "Pumpkin Spice Coffee Latte",
+		weekday: "Wednesday",
+
+	}
+	console.log(today);
+	console.log(coffee),
+
+	//alert("hello")
     </script>
 	
 </body>
