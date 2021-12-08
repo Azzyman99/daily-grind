@@ -52,6 +52,16 @@
 		<main>
 			<header><h3 class="slogan">You drink our coffee, we make large bucks!</h3></header>
 			<div id="coffeeTarget"></div>
+			<p> click below to vie the offfee special for differnt days of the week</p>
+			<p><a href= "?day=0"> Sunday</a></p>
+			<p><a href= "?day=1"> Monday</a></p>
+			<p><a href= "?day=2"> Tuesday</a></p>
+			<p><a href= "?day=3"> Wednesday</a></p>
+			<p><a href= "?day=4"> Thursday</a></p>
+			<p><a href= "?day=5"> Friday</a></p>
+			<p><a href= "?day=6"> Saturday</a></p>
+			
+			
 			<!--
 			<p>
 				<img src="images/pumpkin-spice-latte.jpg" alt="Our Pumpkin Spice Latte tastes great on a Fall Day!" id="coffee" />
@@ -94,6 +104,14 @@
 				</p>`;
 				return myReturn;
 			}
+			//use location object to access querystring (address bar)
+			const queryString = window.location.search;
+				
+			//output to console    
+			console.log(queryString);
+				
+			//separate querystring parameters
+			const urlParams = new URLSearchParams(queryString);
 
 
 
@@ -102,6 +120,13 @@
 			let today = myDate.getDay();
 			let coffee ="";
 			
+
+			if(urlParams.has("day")){
+				today =urlParams.get("day");
+				today = parseInt(today);
+			}
+
+
 			//TEST ONLY
 			//today = 0;
 
